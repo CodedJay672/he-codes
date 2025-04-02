@@ -325,7 +325,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold text-pretty">
                 Performance Optimization:
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin text-prnormal">
+              <p className="text-xs text-background-base dark:text-gray-200 font-normal">
                 Lighthouse, Webpack, PageSpeed Insights, Sentry
               </p>
             </div>
@@ -346,7 +346,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold text-pretty">
                 Bachelor of Science, Computer Science
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin text-pretty">
+              <p className="text-xs text-background-base dark:text-gray-200 text-pretty">
                 Bayero University, Kano (BUK) | Feb 2016 - Sept 2021
               </p>
             </div>
@@ -358,7 +358,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold">
                 Software Engineering Certification
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin">
+              <p className="text-xs text-background-base dark:text-gray-200">
                 ALX Africa (2023)
               </p>
             </div>
