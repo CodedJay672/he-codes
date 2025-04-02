@@ -59,28 +59,54 @@ export default function Home() {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-2">
         <Stack
           heading="HTML"
-          description="I use HTML to structure my webapplications. I apply modern HTML semantics to make my web application more scalable and well structured."
-          icon=""
+          description="I use HTML to structure my web applications. I apply modern HTML semantics to make my web application more scalable and well structured."
+          icon="/icons/html5.png"
         />
         <Stack
           heading="CSS"
-          description="I use CSS to create esthetic designs for my web applications. with CSS I can structure the website layout with ease which helps fit the webapplication perfectly on whatever device is used to load it. My aim when designing with this technology is to produce pixel perfect designs from a figma file."
-          icon=""
+          description="I use CSS to create esthetic designs for my web applications. With CSS I can structure the website layout with ease which helps fit the web application perfectly on whatever device is used to load it. My aim when designing with this technology is to produce pixel perfect designs from a design file."
+          icon="/icons/css3.png"
         />
         <Stack
           heading="JAVASCRIPT"
           description="JavaScript is for adding dynamic behaviour to web applications. This technology makes static web pages and applications come to life. I use this technology to add programmatic capabilities to my web application like fetching data, conditionally renderiing sections of a website or allowing my web applications to communicate with servers via APIs."
-          icon=""
+          icon="/icons/js.png"
         />
         <Stack
           heading="REACTJS"
-          description="This is a Javascript framework which allows me to build components. This technology removes the need for writing certain codes manually. React js allows for reusability of several components and the latest version (v.19) allows components to optionally be rendered on the server. This increases page load speed leading to overall increase in app performance metrics."
-          icon=""
+          description="This is a Javascript framework which allows me to build components. This technology removes the need for writing certain codes manually. ReactJs allows for reusability of several components and the latest version (v.19) allows components to optionally be rendered on the server. This increases page load speed leading to overall increase in app performance metrics."
+          icon="/icons/react.png"
         />
         <Stack
           heading="NEXTJS"
-          description="Nextjs is a react framework. What this means is that Nextjs is ReactJs with more capabilities. This includes file routing, server side rendering, optimized components like Images, fonts, and layouts, etc. NextJs Allows me to write fullstack application owing to its server first approach. This means that I can write applications that communicate with servers and database directly from the same codebase."
-          icon=""
+          description="Nextjs is a react framework. What this means is that Nextjs is ReactJs with more capabilities. This includes file routing, server side rendering by default, optimized components like Images, fonts, and layouts, etc. NextJs Allows me to write fullstack application owing to its server first approach. This means that I can write applications that communicate with database directly from the same codebase."
+          icon="/icons/nextjs.png"
+        />
+        <Stack
+          heading="NPM"
+          description="NPM, Node Package Manager, allows us to download tools and packages directly from the registry into our local devices. This is my favorite tool compared to others like pnpm, yarn, and bun. I love this tool because of the speed with which it loads, the detailed report you get with the downloads and its vast community of users."
+          icon="/icons/npm.png"
+        />
+        <Stack
+          heading="VSCODE"
+          description="Many people would say that I am still old school but then, I love my good old, plain, VSCode editor. This has been my favorite since i left the Notepad family. I know many other great, AI powered editors are making waves out there right now, but I prefer working with VSCode. It recently provides Copilot AI for free as well, so its a win win. Majorly, I love this editor because of its many extensions which makes my life easy."
+          icon="/icons/visual-studio.png"
+        />
+        <Stack
+          heading="GIT"
+          description="building applications require a way for you to track versions of your application as you build. Git makes this seamless and easy. Git is like facebook for programmers: You write your codes upload them on Git, get stars, fork repos, earn badges or even sponsorship and much more. I have been using github from my time as an intern at ALX Africa and since then its become a part of my grow. Git provides you with very helpful process like collabortion, contribution, and codebase snapshot. Codebase snapshot helps you track your code upload up to a certain point (where things probably broke) and you can take your codebase back to that version and start afresh. Check out my profile @Codedjay672"
+          icon="/icons/git.png"
+        />
+
+        <Stack
+          heading="POSTGRESQL"
+          description="Postgresql is SQL with super powers. This Databse tool allows you to store data without the whole hassle that native SQL presents. While working with Postgres, i like to use ORM tools like Drizzle-kit which allows me to write database queries in normal javascript or typescript format. This codes are then processed into native SQL-like commands which I can easily migrate to create my tables and other actions on my database. Working with Postgres has opened my eyes to see how data can be stored effectively and securely."
+          icon="/icons/postgresql.png"
+        />
+        <Stack
+          heading="TYPESCRIPT"
+          description="Javascript on its own is a loosely typed language. What that means is that javascript doesn't make provision for typesafety as anything goes with it. There are many tools out there which developers can use to constrain user into providing the appropriate type of data everytime, but my favorite is TYPESCRIPT. Typescript comes with many benefit including very good typesafety features, auto complete while working with objects, and, as a VSCode bonus, I have detailed intellisense which makes my life very easy"
+          icon="/icons/typescript.png"
         />
       </div>
     </main>
