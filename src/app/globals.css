@@ -11,6 +11,11 @@
   --color-secondary: #03346e;
 }
 
+:root {
+  --transition-time: 0.4s;
+  --filter-time: 0.3s;
+}
+
 @layer base {
   * {
     margin: 0;
@@ -23,6 +28,8 @@
     width: 100vw;
     max-width: 1440px;
     margin: 0 auto;
+    transition: background-color var(--transition-time),
+      color var(--transition-time), filter var(--filter-time);
   }
 
   html {

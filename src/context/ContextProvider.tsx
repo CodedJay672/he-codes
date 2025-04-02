@@ -13,6 +13,10 @@ const ContextProvider = ({ children }: { children: React.ReactNode }) => {
       ? localStorage.getItem("theme")
       : ("light" as string);
 
+    //initialize the theme from localstorage
+    document.documentElement.dataset.theme = savedTheme as string;
+
+    //set theme
     setTheme(savedTheme!);
   }, []);
 
@@ -23,6 +27,10 @@ const ContextProvider = ({ children }: { children: React.ReactNode }) => {
       setTheme("dark");
     }
 
+    // get the html data-theme and set it to the theme
+    document.documentElement.dataset.theme = theme;
+
+    // persist theme in the localstorage
     localStorage.setItem("theme", theme);
   }, [theme]);
 
