@@ -2,7 +2,7 @@
 
 import { GlobalContext } from "@/context/GlobalContext";
 import { createComment } from "@/lib/actions/comments.actions";
-import React, { useActionState, useContext, useState } from "react";
+import React, { useActionState, useContext, useRef, useState } from "react";
 import { HiArrowRightCircle } from "react-icons/hi2";
 import { VscLoading } from "react-icons/vsc";
 
@@ -10,16 +10,25 @@ const FeedbackForm = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const { fbkHeight } = useContext(GlobalContext);
+  const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction, isPending] = useActionState(createComment, null);
+
+  const handleSubmit = () => {
+    setName("");
+    setMessage("");
+    formRef.current?.reset();
+  };
 
   return (
     <form
       action={formAction}
+      onSubmit={handleSubmit}
       className={`w-full mt-3 flex flex-col gap-1 transition-all relative`}
       style={{
         height: `${fbkHeight}`,
         overflow: "hidden",
       }}
+      ref={formRef}
     >
       <label
         htmlFor="name"

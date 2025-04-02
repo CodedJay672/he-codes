@@ -6,6 +6,7 @@ import ContextProvider from "@/context/ContextProvider";
 import Bottombar from "@/components/Bottombar";
 import SidePanel from "@/components/SidePanel";
 import SidePanelToggle from "@/components/ui/ToggleSwitch";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "He Codes",
+  title: "Emmanuuel Joel",
   description: "Web developer | Build Platforms That Elevate Your Business.",
 };
 
@@ -42,6 +43,7 @@ export default function RootLayout({
             </section>
           </main>
           <Bottombar />
+          <Toaster richColors />
         </body>
       </ContextProvider>
     </html>

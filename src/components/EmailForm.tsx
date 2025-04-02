@@ -1,20 +1,66 @@
 "use client";
 
-import { sendEmail } from "@/lib/actions/contact.actions";
-import React, { useActionState, useState } from "react";
+import { deleteContact, sendEmail } from "@/lib/actions/contact.actions";
+import React, { useRef, useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhone, HiOutlineUser } from "react-icons/hi2";
 import { VscLoading } from "react-icons/vsc";
+import emailjs from "@emailjs/browser";
+import { config } from "@/lib/config";
+import { toast } from "sonner";
 
 const EmailForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [state, action, isPending] = useActionState(sendEmail, null);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      //set loading state to true
+      setIsSubmitting(true);
+      const formData = new FormData(formRef.current!);
+      const savedContact = await sendEmail(formData);
+
+      if (!savedContact) {
+        return toast.error("Couldn't save.");
+      }
+
+      // send the email
+      const res = await emailjs.sendForm(
+        config.emailjs.serviceID,
+        config.emailjs.templateID,
+        formRef.current!,
+        {
+          publicKey: config.emailjs.publicKey,
+        }
+      );
+
+      if (res.status !== 200) {
+        await deleteContact(savedContact.$id);
+        return toast.error(`${res.status}: ${res.text}`);
+      }
+      // Reset the form fields
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+      formRef.current?.reset();
+      return toast.success("Message sent successfully!");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      //set loading state to false
+      setIsSubmitting(false);
+    }
+  };
+
   return (
-    <form action={action} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit} ref={formRef} className="flex flex-col gap-4">
       <label htmlFor="name" className="form-label">
         Fullname
         <input
@@ -74,9 +120,9 @@ const EmailForm = () => {
       <button
         type="submit"
         className="w-full lg:w-72 h-12 bg-primary rounded-lg cursor-pointer mt-1 place-self-end flex-center gap-2 disabled:brightness-50"
-        disabled={isPending}
+        disabled={isSubmitting}
       >
-        {isPending && (
+        {isSubmitting && (
           <VscLoading
             size={24}
             className="dark:text-gray-50 text-background-base animate-spin flex-center gap-1 inline"
