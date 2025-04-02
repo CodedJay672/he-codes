@@ -87,7 +87,7 @@ const MyResume = () => {
               <h3 className="text-background-base dark:text-white font-semibold">
                 Frontend Developer (Remote Contract)
               </h3>
-              <p className="text-sm text-gray-900 dark:text-gray-200 font-thin">
+              <p className="text-sm text-gray-900 dark:text-gray-200">
                 Sekure Business | Oct 2024 - Jan 2025
               </p>
 
@@ -121,7 +121,7 @@ const MyResume = () => {
               <h3 className="text-background-base dark:text-white font-semibold">
                 Frontend Developer & IT Officer
               </h3>
-              <p className="text-sm text-gray-900 dark:text-gray-200 font-thin">
+              <p className="text-sm text-gray-900 dark:text-gray-200">
                 Highbridge Homes Ltd (Lagos, Nigeria) | Dec 2023 - Nov 2024
               </p>
 
@@ -145,7 +145,7 @@ const MyResume = () => {
               <h3 className="text-background-base dark:text-white font-semibold">
                 Volunteer Frontend Developer
               </h3>
-              <p className="text-sm text-gray-900 dark:text-gray-200 font-thin">
+              <p className="text-sm text-gray-900 dark:text-gray-200 ">
                 Tech64 Lagos (Remote) | Aug 2023 - Present
               </p>
 
