@@ -19,6 +19,10 @@ const error = ({
         height={210}
         className="fill-primary"
       />
+
+      <p className="text-background-base dark:text-gray-50 text-base text-center font-thin">
+        {error.digest}: {error.message}
+      </p>
       <button
         className="bg-primary text-white px-6 h-10 flex-center mt-6 rounded-lg cursor-pointer"
         onClick={reset}

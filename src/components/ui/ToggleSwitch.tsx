@@ -1,17 +1,13 @@
 "use client";
 
 import { GlobalContext } from "@/context/GlobalContext";
-import { useCallback, useContext, useEffect } from "react";
+import { useContext } from "react";
 import { HiDotsVertical } from "react-icons/hi";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 // toggle switch for mobile
 const SidePanelToggle = () => {
   const { theme, togglePanel, changeTheme } = useContext(GlobalContext);
-
-  // useEffect(() => {
-  //   ()()
-  // }, [theme])
 
   return (
     <div className="w-full flex lg:justify-end justify-between px-2 py-5 sticky top-0 left-0 bg-gray-50 dark:bg-background-base z-50">

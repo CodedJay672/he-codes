@@ -2,7 +2,6 @@
 
 import { ID } from "node-appwrite";
 import { createAdminClient } from "../appwrite";
-import emailjs from "@emailjs/browser";
 import { config } from "../config";
 
 export const sendEmail = async (formData: FormData) => {
