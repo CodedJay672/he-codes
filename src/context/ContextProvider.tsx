@@ -5,7 +5,7 @@ import { GlobalContext } from "./GlobalContext";
 
 const ContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<string>("");
-  const [showPanel, setShowPanel] = useState(true);
+  const [showPanel, setShowPanel] = useState(false);
   const [fbkHeight, setFbkHeight] = useState("auto");
 
   useEffect(() => {
