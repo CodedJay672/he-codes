@@ -17,11 +17,11 @@ export default function Home() {
         <p className="text-background dark:text-gray-50 my-5 lg:px-14 text-center">
           I am a web developer specialized in building scalable and efficient
           platforms for businesses to thrive on the internet. Explore my{" "}
-          <Link href="/resume" className="text-lg text-primary">
+          <Link href="/my-resume" className="text-lg text-primary">
             Resume
           </Link>{" "}
           and{" "}
-          <Link href="" className="text-lg text-primary">
+          <Link href="/my-portfolio" className="text-lg text-primary">
             Portfolio
           </Link>
         </p>
