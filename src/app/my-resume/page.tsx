@@ -87,7 +87,7 @@ const MyResume = () => {
               <h3 className="text-background-base dark:text-white font-semibold">
                 Frontend Developer (Remote Contract)
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-200 font-thin">
+              <p className="text-sm text-gray-900 dark:text-gray-200 font-thin">
                 Sekure Business | Oct 2024 - Jan 2025
               </p>
 
@@ -121,7 +121,7 @@ const MyResume = () => {
               <h3 className="text-background-base dark:text-white font-semibold">
                 Frontend Developer & IT Officer
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-200 font-thin">
+              <p className="text-sm text-gray-900 dark:text-gray-200 font-thin">
                 Highbridge Homes Ltd (Lagos, Nigeria) | Dec 2023 - Nov 2024
               </p>
 
@@ -145,7 +145,7 @@ const MyResume = () => {
               <h3 className="text-background-base dark:text-white font-semibold">
                 Volunteer Frontend Developer
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-200 font-thin">
+              <p className="text-sm text-gray-900 dark:text-gray-200 font-thin">
                 Tech64 Lagos (Remote) | Aug 2023 - Present
               </p>
 
@@ -277,7 +277,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold">
                 Languages:
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin">
+              <p className="text-xs text-background-base dark:text-gray-200 font-normal">
                 JavaScript (ES6+), TypeScript
               </p>
             </div>
@@ -285,7 +285,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold">
                 Frameworks:
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin">
+              <p className="text-xs text-background-base dark:text-gray-200 font-normal">
                 React.js, Next.js, React Native
               </p>
             </div>
@@ -293,7 +293,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold">
                 State Management:
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin">
+              <p className="text-xs text-background-base dark:text-gray-200 font-normal">
                 Redux Toolkit, Zustand, Context API
               </p>
             </div>
@@ -301,7 +301,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold">
                 Testing:
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin">
+              <p className="text-xs text-background-base dark:text-gray-200 font-normal">
                 Jest, React Testing Library
               </p>
             </div>
@@ -309,7 +309,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold">
                 Version Control:
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin">
+              <p className="text-xs text-background-base dark:text-gray-200 font-normal">
                 Git, GitHub, Git-based workflows
               </p>
             </div>
@@ -317,7 +317,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold">
                 API Integration:
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin">
+              <p className="text-xs text-background-base dark:text-gray-200 font-normal">
                 RESTful APIs, GraphQL
               </p>
             </div>
@@ -325,7 +325,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold text-pretty">
                 Performance Optimization:
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin text-pretty">
+              <p className="text-xs text-background-base dark:text-gray-200 font-thin text-prnormal">
                 Lighthouse, Webpack, PageSpeed Insights, Sentry
               </p>
             </div>
@@ -333,7 +333,7 @@ const MyResume = () => {
               <h4 className="text-sm text-background-base dark:text-white font-semibold">
                 Dev Tools:
               </h4>
-              <p className="text-xs text-background-base dark:text-gray-200 font-thin">
+              <p className="text-xs text-background-base dark:text-gray-200 font-normal">
                 VS Code, Postman, Figma, PostgreSQL, Neon, Drizzle, Appwrite
                 Cloud
               </p>
