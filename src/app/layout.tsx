@@ -36,7 +36,7 @@ export default function RootLayout({
           <main className="w-full flex gap-1">
             <Sidebar />
             {children}
-            <div className="hidden lg:block w-64 h-[calc(100vh-50px)] sticky top-13 right-0 bg-white dark:bg-white/10">
+            <div className="hidden lg:block w-72 h-[calc(100vh-50px)] sticky top-13 right-0 bg-white dark:bg-white/10">
               <SidePanel />
             </div>
           </main>
