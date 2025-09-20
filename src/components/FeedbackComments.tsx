@@ -13,7 +13,7 @@ const FeedbackComments = ({ comments }: { comments: Models.Document[] }) => {
       className={`w-full flex-1 bg-white dark:bg-background-base overflow-y-scroll no-scrollbar transition-all duration-300 ease-in-out space-y-3 ${
         fbkHeight
           ? "h-96 absolute bottom-2 right-0"
-          : "absolute bottom-0 right-0 h-60"
+          : "absolute bottom-0 right-0 h-44"
       }`}
     >
       <button
