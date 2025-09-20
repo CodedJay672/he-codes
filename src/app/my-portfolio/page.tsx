@@ -4,8 +4,8 @@ import React from "react";
 
 const PortfolioPage = () => {
   return (
-    <section className="wrapper min-h-screen">
-      <div className="w-full h-64 flex-center flex-col space-y-3">
+    <section className="wrapper flex-center flex-col gap-4">
+      <div className="w-full h-64 flex-center flex-col space-y-3 mt-24">
         <h1 className="text-background-base dark:text-gray-50 text-4xl md:text-5xl lg:text-6xl font-bold capitalize">
           my portfolio
         </h1>
@@ -18,7 +18,8 @@ const PortfolioPage = () => {
             className="text-primary fnot-medium"
           >
             github.
-          </Link>{" "}
+          </Link>
+          <br />
           Are you looking for extra hands to join your team of developers? I am
           open to collaborate with you to bring your dreams to live. Give me a
           call and let's work together to take your business to the next level.
