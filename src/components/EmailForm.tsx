@@ -21,6 +21,10 @@ const EmailForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!name.trim() || !email.trim() || !phone.trim() || !message.trim()) {
+      return toast.error("All fields are required.");
+    }
+
     try {
       //set loading state to true
       setIsSubmitting(true);
@@ -28,7 +32,7 @@ const EmailForm = () => {
       const savedContact = await sendEmail(formData);
 
       if (!savedContact || savedContact instanceof AppwriteException) {
-        return toast.error(savedContact.message);
+        return toast.error(savedContact?.message);
       }
 
       // send the email
@@ -42,7 +46,7 @@ const EmailForm = () => {
       );
 
       if (res.status !== 200) {
-        await deleteContact(savedContact.$id);
+        await deleteContact(savedContact?.$id);
         return toast.error(`${res.status}: ${res.text}`);
       }
       // Reset the form fields

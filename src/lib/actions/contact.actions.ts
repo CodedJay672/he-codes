@@ -11,6 +11,10 @@ export const sendEmail = async (formData: FormData) => {
     const email = formData.get("email");
     const phone = formData.get("phone");
 
+    if (!name || !email || !phone) {
+      return;
+    }
+
     //save the sender to my database
     const response = await database.createDocument(
       config.appwriteDatabaseID!,
