@@ -21,7 +21,7 @@ const SidePanel = async () => {
   }
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full flex-col">
       <div className="p-2">
         <div className="w-full">
           <h2 className="text-base text-gray-900 dark:text-white font-medium">
