@@ -28,7 +28,6 @@ export const createComment = async (prevState: any, formData: FormData) => {
     }
 
     revalidatePath("/");
-
     return response;
   } catch (error) {
     if (error instanceof AppwriteException) {
