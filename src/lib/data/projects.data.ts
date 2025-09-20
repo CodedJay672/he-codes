@@ -1,7 +1,8 @@
-"use server";
+import "server-only";
 
 import { createAdminClient } from "../appwrite";
 import { config } from "../config";
+import { AppwriteException } from "node-appwrite";
 
 export const getProjects = async () => {
   try {
@@ -17,7 +18,11 @@ export const getProjects = async () => {
     }
 
     return response;
-  } catch (error: any) {
-    throw new Error(error.message);
+  } catch (error) {
+    if (error instanceof AppwriteException) {
+      return error;
+    }
+
+    throw error;
   }
 };

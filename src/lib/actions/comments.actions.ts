@@ -1,6 +1,6 @@
 "use server";
 
-import { ID } from "node-appwrite";
+import { AppwriteException, ID } from "node-appwrite";
 import { createAdminClient } from "../appwrite";
 import { config } from "../config";
 import { revalidatePath } from "next/cache";
@@ -30,26 +30,11 @@ export const createComment = async (prevState: any, formData: FormData) => {
     revalidatePath("/");
 
     return response;
-  } catch (error: any) {
-    throw new Error(error.message);
-  }
-};
-
-export const fetchMessages = async () => {
-  try {
-    const { database } = await createAdminClient();
-
-    const response = await database.listDocuments(
-      config.appwriteDatabaseID!,
-      config.appwriteCommentsCollectionID!
-    );
-
-    if (!response) {
-      throw new Error("Cannot fetch comments at this time.");
+  } catch (error) {
+    if (error instanceof AppwriteException) {
+      return error;
     }
 
-    return response;
-  } catch (error: any) {
-    throw new Error(error.message);
+    throw error;
   }
 };

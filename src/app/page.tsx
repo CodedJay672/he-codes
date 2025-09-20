@@ -5,47 +5,53 @@ export default function Home() {
   return (
     <main className="wrapper flex-center flex-col gap-2">
       <div className="w-full flex-center flex-col mt-24">
-        <p className="text-xl lg:text-4xl font-medium text-backgound-base dark:text-gray-50">
+        <p className="text-xl lg:text-4xl font-medium dark:text-gray-50">
           Hi, I'm
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary">
           Emmanuel Ugoh
         </h1>
-        <p className="capitalize text-background dark:text-gray-300 tracking-widest text-sm">
+        <p className="capitalize dark:text-gray-400 tracking-widest font-medium text-sm">
           web developer | fullstack engineer
         </p>
-        <p className="text-background dark:text-gray-50 my-5 lg:px-14 text-center">
+        <p className="text-background-base dark:text-gray-100 my-5 lg:px-14 text-center">
           I am a web developer specialized in building scalable and efficient
           platforms for businesses to thrive on the internet. Explore my{" "}
-          <Link href="/my-resume" className="text-lg text-primary">
+          <Link
+            href="/my-resume"
+            className="text-lg text-primary font-semibold"
+          >
             Resume
           </Link>{" "}
           and{" "}
-          <Link href="/my-portfolio" className="text-lg text-primary">
+          <Link
+            href="/my-portfolio"
+            className="text-lg text-primary font-semibold"
+          >
             Portfolio
           </Link>
         </p>
       </div>
 
-      <div className="w-full lg:w-1/2 p-2 lg:p-3 flex justify-center items-center lg:justify-start gap-4 lg:gap-6">
+      <div className="w-full lg:w-1/2 p-2 lg:p-3 flex items-center justify-between gap-4 lg:gap-6">
         <p className="text-2xl lg:text-4xl text-primary font-bold flex-center">
-          2+{" "}
-          <span className="text-base text-background-base dark:text-gray-50 font-thin">
-            | Years experience
+          4+{" "}
+          <span className="text-base text-background-base dark:text-gray-50 font-normal border-l-2 border-primary p-2 ml-2">
+            Years experience
           </span>
         </p>
         <p className="text-2xl lg:text-4xl text-primary font-bold flex-center">
           6+{" "}
-          <span className="text-base text-background-base dark:text-gray-50 font-thin">
-            | Completed projects
+          <span className="text-base text-background-base dark:text-gray-50 font-normal border-l-2 border-primary p-2 ml-2">
+            Completed projects
           </span>
         </p>
       </div>
 
-      <div className="w-full my-24">
-        <h1 className="text-primary text-xl lg:text-2xl border-l border-primary p-2">
+      <div className="w-full my-24 space-y-3">
+        <h2 className="text-primary text-xl lg:text-2xl border-l-2 border-primary p-2 font-medium">
           What I Do
-        </h1>
+        </h2>
         <p className="text-background-base dark:text-gray-50 text-pretty">
           As a web developer, I specialize in building scalable and maintanable
           web applications with mordern user interfaces and functionalities. I
@@ -90,7 +96,7 @@ export default function Home() {
         <Stack
           heading="VSCODE"
           description="Many people would say that I am still old school but then, I love my good old, plain, VSCode editor. This has been my favorite since i left the Notepad family. I know many other great, AI powered editors are making waves out there right now, but I prefer working with VSCode. It recently provides Copilot AI for free as well, so its a win win. Majorly, I love this editor because of its many extensions which makes my life easy."
-          icon="/icons/visual-studio.png"
+          icon="/icons/vsc.png"
         />
         <Stack
           heading="GIT"

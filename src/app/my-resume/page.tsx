@@ -13,8 +13,9 @@ const MyResume = () => {
         </h1>
         <Link
           href="/assets/resume.pdf"
-          download={true}
+          download
           target="_blank"
+          rel="noopener noreferrer"
           className="text-sm md:text-base px-4 py-3 bg-primary text-gray-50 rounded-lg brightness-90 hover:brightness-100 transition-all flex items-center gap-2"
         >
           <IoMdDocument size={24} color="white" />
@@ -36,7 +37,7 @@ const MyResume = () => {
             <div className="flex items-center gap-0.5">
               <HiOutlinePhone size={14} className="text-primary" />
               <span className="text-background-light dark:text-gray-50 text-sm">
-                +234 903 270 5515
+                +234 813 953 6456
               </span>
             </div>
             <div className="flex items-center gap-0.5">
@@ -47,9 +48,12 @@ const MyResume = () => {
             </div>
             <div className="flex items-center gap-0.5 text-sm">
               <HiOutlineGlobeAlt size={14} className="text-primary" />
-              <span className="text-background-light dark:text-gray-50 text-sm">
-                www.manny-dev.vercel.app
-              </span>
+              <Link
+                href="https://www.dev-deck-zeta.vercel.app"
+                className="text-background-light dark:text-gray-50 text-sm"
+              >
+                Business website
+              </Link>
             </div>
             <div className="flex items-center gap-0.5 text-sm">
               <HiOutlineLocationMarker size={14} className="text-primary" />
@@ -65,11 +69,11 @@ const MyResume = () => {
             Professional Summary
           </h2>
           <p className="text-background-base dark:text-gray-50">
-            Results-driven Frontend Engineer with over 2 years of experience
+            Results-driven Frontend Engineer with over 4 years of experience
             specializing in building high-performance, scalable, and secure web
             applications. Proficient in React.js, Nextjs, TypeScript, and state
-            management solutions like Redux and ContextAPI. Experienced in
-            developing intuitive and responsive UI components while ensuring
+            management solutions like Redux, Zustand and ContextAPI. Experienced
+            in developing intuitive and responsive UI components while ensuring
             optimal performance across various devices. Adept at collaborating
             with cross-functional teams to deliver innovative and reliable
             solutions, particularly within fintech and payments-related
@@ -83,6 +87,75 @@ const MyResume = () => {
             <h2 className="text-xl lg:text-2xl text-primary font-semibold">
               Experience
             </h2>
+
+            <div className="w-full">
+              <h3 className="text-background-base dark:text-white font-semibold">
+                Lead Fullstack Developer (Remote Contract)
+              </h3>
+              <p className="text-sm text-gray-900 dark:text-gray-200">
+                WakoCoding | Feb 2025 - Apr 2025
+              </p>
+
+              <ul className="w-full p-2 list-disc list-inside space-y-1">
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Built a multi-tenanat e-commerce MVP for vendors, farmers and
+                  agents to sell their cooked and raw foods.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Integrated RESTful APIs for real-time data updates with
+                  tanstack react-query which is perfecting for caching fetch
+                  results and state management.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Built a responsive UI using Next.js, and Tailwind CSS.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Implemented secure authentication and multi-role access
+                  control for vendor, admin, agents and customers.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Enhanced application state management using Redux Toolkit for
+                  scalability.
+                </li>
+              </ul>
+            </div>
+
+            <div className="w-full">
+              <h3 className="text-background-base dark:text-white font-semibold">
+                Lead Frontend Developer (Remote Contract)
+              </h3>
+              <p className="text-sm text-gray-900 dark:text-gray-200">
+                myCartsOnline | June 2025 - Present
+              </p>
+
+              <ul className="w-full p-2 list-disc list-inside space-y-1">
+                <li className="text-background dark:text-gray-50 text-sm">
+                  My carts online is a multi-tennant application which has a
+                  multi-tenant architecture. This system allows vendors to
+                  register their businessnes and upload their stores and
+                  products for sale.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Integrated RESTful APIs for real-time data updates with
+                  tanstack react-query which is perfecting for caching fetch
+                  results and state management.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Built a responsive UI using Next.js, and Tailwind CSS.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Implemented secure authentication and multi-role access
+                  control for different users. This is implemented by securely
+                  storing JWT tokens for each user, allowing them access the
+                  resources only available to their roles.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Enhanced application state management using zuztand for
+                  scalability.
+                </li>
+              </ul>
+            </div>
+
             <div className="w-full">
               <h3 className="text-background-base dark:text-white font-semibold">
                 Frontend Developer (Remote Contract)
@@ -170,6 +243,88 @@ const MyResume = () => {
             <h2 className="text-xl lg:text-2xl text-primary font-semibold">
               Key Projects
             </h2>
+            <div className="w-full">
+              <h3 className="text-background-base dark:text-white font-semibold">
+                mycartsonline
+              </h3>
+
+              <ul className="w-full p-2 list-disc list-inside space-y-1">
+                <li className="text-background dark:text-gray-50 text-sm">
+                  online multi-tenant application with different user roles for
+                  vendor, riders, admin and customers
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  implment secure login for different roles.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  implemented complex layouts and isolated dashboard and content
+                  for each user role with Nextjs
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  implemented notification systems, on-demand application
+                  updates and professional emailing systems for all users.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Followed modern design principles which promote user
+                  interaction and experience
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Ensured design is mobile responsive for different device sizes
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  <span className="font-bold">Tech Stack:</span> NextJs,
+                  TailwindCSS, React Icons, zustand, and shadcn component
+                  library
+                </li>
+                <Link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base text-primary"
+                >
+                  Coming soon
+                </Link>
+              </ul>
+            </div>
+            <div className="w-full">
+              <h3 className="text-background-base dark:text-white font-semibold">
+                foodstreet.ng
+              </h3>
+
+              <ul className="w-full p-2 list-disc list-inside space-y-1">
+                <li className="text-background dark:text-gray-50 text-sm">
+                  online multi-tenant application with different user roles for
+                  vendor, agent, admin and customers
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  implment secure login for different roles.
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  implemented complex layouts and isolated dashboard and content
+                  for each user role with Nextjs
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Followed modern design principles which promote user
+                  interaction and experience
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  Ensured design is mobile responsive for different device sizes
+                </li>
+                <li className="text-background dark:text-gray-50 text-sm">
+                  <span className="font-bold">Tech Stack:</span> NextJs,
+                  TailwindCSS, React Icons, zustand, and shadcn component
+                  library
+                </li>
+                <Link
+                  href="https://www.foodstreet.ng"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base text-primary"
+                >
+                  Live Site
+                </Link>
+              </ul>
+            </div>
             <div className="w-full">
               <h3 className="text-background-base dark:text-white font-semibold">
                 TechCity Landing page
@@ -278,7 +433,7 @@ const MyResume = () => {
                 Languages:
               </h4>
               <p className="text-xs text-background-base dark:text-gray-200 font-normal">
-                JavaScript (ES6+), TypeScript
+                JavaScript (ES6+), TypeScript, Nodejs (server-side)
               </p>
             </div>
             <div className="flex items-center gap-1">
@@ -286,7 +441,7 @@ const MyResume = () => {
                 Frameworks:
               </h4>
               <p className="text-xs text-background-base dark:text-gray-200 font-normal">
-                React.js, Next.js, React Native
+                React.js, Next.js, React Native, Expressjs
               </p>
             </div>
             <div className="flex items-center gap-1">
@@ -310,7 +465,7 @@ const MyResume = () => {
                 Version Control:
               </h4>
               <p className="text-xs text-background-base dark:text-gray-200 font-normal">
-                Git, GitHub, Git-based workflows
+                Git, GitHub, Git-based workflows,
               </p>
             </div>
             <div className="flex items-center gap-1">
@@ -335,7 +490,7 @@ const MyResume = () => {
               </h4>
               <p className="text-xs text-background-base dark:text-gray-200 font-normal">
                 VS Code, Postman, Figma, PostgreSQL, Neon, Drizzle, Appwrite
-                Cloud
+                Cloud, supabase, insomnia, clerk SDK
               </p>
             </div>
 

@@ -20,7 +20,7 @@ const NavLink = ({ path, label, icon }: NavLinkProps) => {
   return (
     <Link
       href={path}
-      className={`w-full p-2 lg:py-3 transition-all text-background-base flex flex-col items-center lg:flex-row gap-1 capitalize lg:px-16 rounded-xl ${
+      className={`w-full p-1 transition-all text-background-base text-xs sm:text-sm lg:text-base lg:pl-4 flex flex-col items-center lg:flex-row gap-1 lg:gap-3 capitalize rounded-xl ${
         isActive()
           ? "bg-primary font-bold text-white"
           : "hover:bg-primary/10 text-gray-500"

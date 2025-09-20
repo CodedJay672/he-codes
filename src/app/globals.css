@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-background-base: #15192b;
   --color-background: #283747;
-  --color-foreground: "#";
   --color-background-light: #576475;
   --color-primary: #6eacda;
   --color-secondary: #03346e;
@@ -14,27 +13,6 @@
 :root {
   --transition-time: 0.4s;
   --filter-time: 0.3s;
-}
-
-@layer base {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-style: normal;
-  }
-
-  body {
-    width: 100vw;
-    max-width: 1440px;
-    margin: 0 auto;
-    transition: background-color var(--transition-time),
-      color var(--transition-time), filter var(--filter-time);
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -53,7 +31,7 @@
     @apply flex justify-between items-center;
   }
   .wrapper {
-    @apply flex-1 max-w-3xl mx-auto p-4 w-full mb-20 lg:mb-0 md:px-10 lg:px-7;
+    @apply w-full max-w-3xl mx-auto p-4 mb-20 lg:mb-0 md:px-10 lg:px-7;
   }
   .h1-style {
     @apply text-xl font-semibold p-4 text-background-base dark:text-gray-50 border-l border-primary;

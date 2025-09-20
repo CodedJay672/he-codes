@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Exo_2 } from "next/font/google";
+import { Toaster } from "sonner";
+
 import Sidebar from "@/components/Sidebar";
-import ContextProvider from "@/context/ContextProvider";
 import Bottombar from "@/components/Bottombar";
 import SidePanel from "@/components/SidePanel";
 import SidePanelToggle from "@/components/ui/ToggleSwitch";
-import { Toaster } from "sonner";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import "./globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const exo_2 = Exo_2({
+  variable: "--font-exo-2",
   subsets: ["latin"],
 });
 
@@ -29,23 +26,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html data-theme="dark" lang="en">
-      <ContextProvider>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-gray-50 dark:bg-gradient-to-br from-background-base from-65% to-black w-full max-w-[1440px] flex justify-between`}
-        >
-          <Sidebar />
-          <main className="w-full flex flex-col gap-1">
-            <SidePanelToggle />
-            <section className="w-full lg:flex justify-between">
-              {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${exo_2.variable} antialiased`}>
+        <ThemeProvider attribute="class" disableTransitionOnChange>
+          <SidePanelToggle>
+            <SidePanel />
+          </SidePanelToggle>
+
+          <main className="w-full flex gap-1">
+            <Sidebar />
+            {children}
+            <div className="hidden lg:block w-64 h-[calc(100vh-50px)] sticky top-13 right-0 bg-white dark:bg-white/10">
               <SidePanel />
-            </section>
+            </div>
           </main>
+
           <Bottombar />
           <Toaster richColors />
-        </body>
-      </ContextProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

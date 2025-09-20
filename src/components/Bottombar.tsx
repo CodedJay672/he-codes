@@ -10,22 +10,22 @@ const Bottombar = () => {
       <NavLink
         path="/"
         label="about"
-        icon={<HiUserCircle className="size-6 lg:size-10" />}
+        icon={<HiUserCircle className="size-4 lg:size-8" />}
       />
       <NavLink
         path="/my-resume"
         label="resume"
-        icon={<MdFileOpen className="size-6 lg:size-10" />}
+        icon={<MdFileOpen className="size-4 lg:size-8" />}
       />
       <NavLink
         path="/my-portfolio"
         label="portfolio"
-        icon={<HiFolder className="size-6 lg:size-10" />}
+        icon={<HiFolder className="size-4 lg:size-8" />}
       />
       <NavLink
         path="/contact-me"
         label="contact"
-        icon={<HiMail className="size-6 lg:size-10" />}
+        icon={<HiMail className="size-4 lg:size-8" />}
       />
     </div>
   );

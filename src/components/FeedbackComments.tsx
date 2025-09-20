@@ -1,21 +1,31 @@
 "use client";
 
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import Comment from "./ui/Comment";
 import { Models } from "node-appwrite";
-import { GlobalContext } from "@/context/GlobalContext";
+import { HiChevronDown } from "react-icons/hi2";
 
 const FeedbackComments = ({ comments }: { comments: Models.Document[] }) => {
-  const { fbkHeight, resizeFbk } = useContext(GlobalContext);
+  const [fbkHeight, resizeFbk] = useState(false);
 
   return (
-    <>
-      <span
-        className="w-full py-1 px-3 bg-white/20 backdrop-blur-lg block text-primary sticky top-0 left-0 cursor-pointer"
-        onClick={resizeFbk}
+    <div
+      className={`w-full flex-1 bg-white dark:bg-background-base overflow-y-scroll no-scrollbar transition-all duration-300 ease-in-out space-y-3 ${
+        fbkHeight ? "h-96 absolute bottom-2 right-0" : "h-60"
+      }`}
+    >
+      <button
+        className="w-full p-3 bg-gray-100 flex justify-center items-center gap-2 dark:bg-background text-primary font-medium sticky top-0 left-0 cursor-pointer "
+        onClick={() => resizeFbk((prev) => !prev)}
       >
-        See {fbkHeight === "auto" ? "more" : "less"}
-      </span>
+        See {fbkHeight ? "less" : "more"}
+        <HiChevronDown
+          size={20}
+          className={`text-primary transition-transform duration-300 ease-in-out ${
+            fbkHeight ? "rotate-180" : "rotate-0"
+          }`}
+        />
+      </button>
       {comments?.map((comment) => (
         <Comment
           key={comment.$id}
@@ -23,7 +33,7 @@ const FeedbackComments = ({ comments }: { comments: Models.Document[] }) => {
           comment={comment.feedback}
         />
       ))}
-    </>
+    </div>
   );
 };
 

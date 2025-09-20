@@ -1,6 +1,6 @@
 "use server";
 
-import { ID } from "node-appwrite";
+import { AppwriteException, ID } from "node-appwrite";
 import { createAdminClient } from "../appwrite";
 import { config } from "../config";
 
@@ -24,8 +24,12 @@ export const sendEmail = async (formData: FormData) => {
     }
 
     return response;
-  } catch (error: any) {
-    throw new Error(error.message);
+  } catch (error) {
+    if (error instanceof AppwriteException) {
+      return error;
+    }
+
+    throw error;
   }
 };
 
@@ -40,7 +44,11 @@ export const deleteContact = async (id: string) => {
     );
 
     return true;
-  } catch (error: any) {
-    throw new Error(error.message);
+  } catch (error) {
+    if (error instanceof AppwriteException) {
+      return error;
+    }
+
+    throw error;
   }
 };

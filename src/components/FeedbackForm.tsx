@@ -1,15 +1,13 @@
 "use client";
 
-import { GlobalContext } from "@/context/GlobalContext";
 import { createComment } from "@/lib/actions/comments.actions";
-import React, { useActionState, useContext, useRef, useState } from "react";
+import React, { useActionState, useRef, useState } from "react";
 import { HiArrowRightCircle } from "react-icons/hi2";
 import { VscLoading } from "react-icons/vsc";
 
 const FeedbackForm = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const { fbkHeight } = useContext(GlobalContext);
   const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction, isPending] = useActionState(createComment, null);
 
@@ -25,7 +23,6 @@ const FeedbackForm = () => {
       onSubmit={handleSubmit}
       className={`w-full mt-3 flex flex-col gap-1 transition-all relative`}
       style={{
-        height: `${fbkHeight}`,
         overflow: "hidden",
       }}
       ref={formRef}
@@ -42,7 +39,7 @@ const FeedbackForm = () => {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full h-12 lg:h-10 p-2 border border-primary text-background-base dark:text-gray-50 rounded-md text-base font-thin ring-0 outline-none"
+          className="w-full h-12 lg:h-10 p-2 border border-primary text-background-base dark:text-gray-50 rounded-md text-base ring-0 outline-none"
         />
       </label>
       <label
@@ -56,7 +53,7 @@ const FeedbackForm = () => {
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="text-background-base dark:text-gray-50 w-full h-32 resize-none lg:h-32 p-2 border border-primary rounded-md text-base font-thin outline-none ring-0"
+          className="text-background-base dark:text-gray-50 w-full h-32 resize-none lg:h-32 p-2 border border-primary rounded-md text-base outline-none ring-0"
         />
       </label>
 
