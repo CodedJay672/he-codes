@@ -13,6 +13,7 @@ const MyResume = () => {
         </h1>
         <Link
           href="/assets/resume.pdf"
+          target="_blank"
           download
           className="text-sm md:text-base px-4 py-3 bg-primary text-gray-50 rounded-lg brightness-90 hover:brightness-100 transition-all flex items-center gap-2"
         >
