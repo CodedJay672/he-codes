@@ -21,22 +21,22 @@ const ContactPage = () => {
         </p>
         <div className="flex-between gap-5">
           <Link href="https://linkedin.com/ln/emmanueljoel672/">
-            <FaLinkedin size={24} className="text-blue-800" />
+            <FaLinkedin size={20} className="text-blue-800" />
           </Link>
           <Link href="https://web.facebook.com/Manny6456">
-            <FaFacebook size={24} className="text-blue-700" />
+            <FaFacebook size={20} className="text-blue-700" />
           </Link>
           <Link href="https://linkedin.com/ln/emmanueljoel672/">
-            <FaTwitter size={24} className="text-cyan-600" />
+            <FaTwitter size={20} className="text-cyan-600" />
           </Link>
         </div>
       </div>
 
       <div className="w-full my-16 space-y-4">
         <h1 className="h1-style">Contact Details</h1>
-        <p className="text-background dark:text-gray-200">
+        <p className="text-base lg:text-lg text-background dark:text-gray-200">
           Feel free to contact through any of the media below: I typically
-          response in 2 minutes.
+          respond in 2 minutes.
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 mt-5">
           <ContactCard
@@ -56,8 +56,6 @@ const ContactPage = () => {
           />
         </div>
       </div>
-
-      <div className="w-full"></div>
 
       <div className="space-y-4">
         <h1 className="h1-style">Get in touch</h1>

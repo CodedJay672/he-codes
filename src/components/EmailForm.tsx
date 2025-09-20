@@ -8,6 +8,7 @@ import { VscLoading } from "react-icons/vsc";
 import emailjs from "@emailjs/browser";
 import { config } from "@/lib/config";
 import { toast } from "sonner";
+import { AppwriteException } from "node-appwrite";
 
 const EmailForm = () => {
   const [name, setName] = useState("");
@@ -26,8 +27,8 @@ const EmailForm = () => {
       const formData = new FormData(formRef.current!);
       const savedContact = await sendEmail(formData);
 
-      if (!savedContact) {
-        return toast.error("Couldn't save.");
+      if (!savedContact || savedContact instanceof AppwriteException) {
+        return toast.error(savedContact.message);
       }
 
       // send the email
@@ -52,7 +53,9 @@ const EmailForm = () => {
       formRef.current?.reset();
       return toast.success("Message sent successfully!");
     } catch (error) {
-      console.log(error);
+      toast.error(
+        error instanceof AppwriteException ? error.message : String(error)
+      );
     } finally {
       //set loading state to false
       setIsSubmitting(false);
@@ -119,8 +122,8 @@ const EmailForm = () => {
 
       <button
         type="submit"
-        className="w-full lg:w-72 h-12 bg-primary rounded-lg cursor-pointer mt-1 place-self-end flex-center gap-2 disabled:brightness-50"
         disabled={isSubmitting}
+        className="w-full lg:w-72 h-12 bg-primary rounded-lg cursor-pointer mt-1 place-self-end flex-center gap-2 disabled:opacity-50"
       >
         {isSubmitting && (
           <VscLoading

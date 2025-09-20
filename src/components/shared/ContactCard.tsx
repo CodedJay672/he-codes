@@ -10,13 +10,13 @@ const ContactCard = ({
   info: string;
 }) => {
   return (
-    <article className="w-full p-3 flex-center gap-1 border-l border-primary">
+    <article className="w-full p-3 flex-center gap-2 border-l-2 border-primary">
       {icon}
       <div className="flex-1">
-        <h3 className="text-background-base dark:text-white font-bold">
+        <h3 className="text-background-base dark:text-white font-semibold">
           {type}
         </h3>
-        <p className="text-xs text-background-base dark:text-gray-200">
+        <p className="text-xs lg:text-sm text-background-base dark:text-gray-200 font-light">
           {info}
         </p>
       </div>

@@ -49,9 +49,7 @@ export default function Home() {
       </div>
 
       <div className="w-full my-24 space-y-3">
-        <h2 className="text-primary text-xl lg:text-2xl border-l-2 border-primary p-2 font-medium">
-          What I Do
-        </h2>
+        <h2 className="h1-style">What I Do</h2>
         <p className="text-background-base dark:text-gray-50 text-pretty">
           As a web developer, I specialize in building scalable and maintanable
           web applications with mordern user interfaces and functionalities. I
