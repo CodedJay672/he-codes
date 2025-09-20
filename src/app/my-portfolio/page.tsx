@@ -21,7 +21,7 @@ const PortfolioPage = () => {
           </Link>
           <br />
           Are you looking for extra hands to join your team of developers? I am
-          open to collaborate with you to bring your dreams to live. Give me a
+          open to collaborate with you to bring your dreams to life. Give me a
           call and let's work together to take your business to the next level.
         </p>
 
