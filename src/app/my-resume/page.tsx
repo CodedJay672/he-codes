@@ -14,8 +14,6 @@ const MyResume = () => {
         <Link
           href="/assets/resume.pdf"
           download
-          target="_blank"
-          rel="noopener noreferrer"
           className="text-sm md:text-base px-4 py-3 bg-primary text-gray-50 rounded-lg brightness-90 hover:brightness-100 transition-all flex items-center gap-2"
         >
           <IoMdDocument size={24} color="white" />
