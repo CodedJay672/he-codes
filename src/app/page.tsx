@@ -51,12 +51,25 @@ export default function Home() {
       <div className="w-full my-24 space-y-3">
         <h2 className="h1-style">What I Do</h2>
         <p className="text-background-base dark:text-gray-50 text-pretty">
-          As a web developer, I specialize in building scalable and maintanable
-          web applications with mordern user interfaces and functionalities. I
-          build applications that will stand the test of time because they
-          follow universal industry standards. I build fullstack applications
-          that are secure, fast and robust to handle complex business logic
-          allowing businesses carry out their activities efficiently.
+          I am a{" "}
+          <span className="text-primary font-bold">Software Engineer</span>{" "}
+          dedicated to the art of simplification. I specialize in using
+          <span className="text-primary font-bold">
+            JavaScript and TypeScript
+          </span>{" "}
+          to transform heavy, complex business logic into clean, intuitive
+          interfaces that users can navigate effortlessly.
+          <br /> <br />
+          My approach is rooted in the belief that technical excellence should
+          never come at the expense of user experience. Beyond engineering, I am
+          a{" "}
+          <span className="text-primary font-bold">
+            content creator and technical advocate
+          </span>
+          , sharing insights on LinkedIn to bridge the communication gap between
+          developers and stakeholders. I thrive in high-stakes
+          environments—helping tech companies and startups turn technical debt
+          into scalable assets and confused users into loyal advocates.
         </p>
       </div>
 
