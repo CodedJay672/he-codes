@@ -66,6 +66,10 @@ export default function Home() {
           <span className="text-primary font-bold">
             content creator and technical advocate
           </span>
+          , sharing insights on LinkedIn to bridge the communication gap between
+          developers and stakeholders. I thrive in high-stakes
+          environments—helping tech companies and startups turn technical debt
+          into scalable assets and confused users into loyal advocates.
         </p>
       </div>
 
