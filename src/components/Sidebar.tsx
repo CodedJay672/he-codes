@@ -15,7 +15,7 @@ const Sidebar = () => {
     <aside className="hidden lg:block w-62 py-6 px-2 shrink-0 h-[calc(100vh-50px)] lg:sticky top-13 left-0 flex-col items-center bg-gray-50 dark:bg-background-base/20 overflow-y-scroll no-scrollbar">
       <div className="w-full flex-center flex-col gap-2">
         <Image
-          src="/assets/profile.jpg"
+          src="/assets/profile.png"
           alt="he-codes"
           width={120}
           height={120}
@@ -26,7 +26,7 @@ const Sidebar = () => {
           Emmanuel Ugoh
         </h1>
         <p className="text-sm text-background-base dark:text-gray-400 font-medium text-center">
-          NextJs Developer
+          Software Engineer
         </p>
 
         <div className="flex-between gap-5 mt-1">

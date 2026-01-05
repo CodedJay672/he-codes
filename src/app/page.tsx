@@ -1,5 +1,6 @@
 import Stack from "@/components/Stack";
-import Link from "next/link";
+import { brandFiles } from "@/constants";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,40 +13,49 @@ export default function Home() {
           Emmanuel Ugoh
         </h1>
         <p className="capitalize dark:text-gray-400 tracking-widest font-medium text-sm">
-          web developer | fullstack engineer
+          fullstack Software engineer
         </p>
         <p className="text-background-base dark:text-gray-100 my-5 lg:px-14 text-center">
           I am a web developer specialized in building scalable and efficient
-          platforms for businesses to thrive on the internet. Explore my{" "}
-          <Link
-            href="/my-resume"
-            className="text-lg text-primary font-semibold"
-          >
-            Resume
-          </Link>{" "}
-          and{" "}
-          <Link
-            href="/my-portfolio"
-            className="text-lg text-primary font-semibold"
-          >
-            Portfolio
-          </Link>
+          platforms for businesses to thrive on the internet.
         </p>
       </div>
 
       <div className="w-full lg:w-1/2 p-2 lg:p-3 flex items-center justify-between gap-4 lg:gap-6">
-        <p className="text-2xl lg:text-4xl text-primary font-bold flex-center">
+        <p className="text-xl md:text-2xl text-primary font-bold flex-center">
           4+{" "}
-          <span className="text-base text-background-base dark:text-gray-50 font-normal border-l-2 border-primary p-2 ml-2">
+          <span className="text-sm md:text-base text-background-base dark:text-gray-50 font-normal border-l-2 border-primary px-2 ml-2">
             Years experience
           </span>
         </p>
-        <p className="text-2xl lg:text-4xl text-primary font-bold flex-center">
+        <p className="text-xl md:text-2xl text-primary font-bold flex-center">
           6+{" "}
-          <span className="text-base text-background-base dark:text-gray-50 font-normal border-l-2 border-primary p-2 ml-2">
+          <span className="text-sm md:text-base text-background-base dark:text-gray-50 font-normal border-l-2 border-primary px-2 ml-2">
             Completed projects
           </span>
         </p>
+      </div>
+
+      {/** brand logos that i have worked with will be displayed here */}
+
+      <div className="w-full my-12">
+        <h2 className="sr-only">Trusted By</h2>
+        <div className="w-full px-1.5 py-4 rounded-xl backdrop-blur-3xl bg-blend-darken overflow-hidden flex-center gap-6 flex-wrap bg-gradient-to-r from-0% from-secondary/10 via-transparent to-secondary/10">
+          {brandFiles.map((brand) => (
+            <Image
+              src={brand.imgUrl}
+              alt={brand.name}
+              key={brand.id}
+              width={90}
+              height={32}
+              className={`max-sm:w-14 max-sm:h-7 select-none object-contain invert-100 grayscale-100 ${
+                brand.name === "clean-beauriful-properties"
+                  ? "w-14 max-sm:w-12"
+                  : ""
+              }`}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="w-full my-24 space-y-3">
