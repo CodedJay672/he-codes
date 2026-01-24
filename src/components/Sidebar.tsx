@@ -48,7 +48,7 @@ const Sidebar = () => {
             />
           </Link>
           <Link
-            href="https://linkedin.com/ln/emmanueljoel672/"
+            href="https://x.com/_iammanny_"
             target="_blank"
             rel="noopener noreferrer"
           >
