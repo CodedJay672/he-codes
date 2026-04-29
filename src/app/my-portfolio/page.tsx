@@ -1,7 +1,7 @@
 import Projects from "@/components/Projects";
 import Tab from "@/components/shared/tab";
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
 import { HiArrowRight, HiCheckCircle } from "react-icons/hi2";
 
 const categories = [
@@ -74,12 +74,21 @@ const PortfolioPage = () => {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="w-full flex-center gap-3 py-8 mb-4 flex-wrap">
-        {categories.map((cat) => (
-          <Tab key={cat.name} cat={cat} />
-        ))}
-      </section>
+      <Suspense fallback={
+        <div className="w-full py-8 flex-center">
+          {Array.from({ length: 4 }).map((_, idx) => (
+            <div key={idx} className="w-full md:w-1/2 lg:w-1/4 p-4">
+              <div className="card-glass animate-pulse h-64 rounded-xl" />
+            </div>
+          ))}
+        </div>
+      }>
+        <section className="w-full flex-center gap-3 py-8 mb-4 flex-wrap">
+          {categories.map((cat) => (
+            <Tab key={cat.name} cat={cat} />
+          ))}
+        </section>
+      </Suspense>
 
       {/* Projects Grid */}
       <section className="w-full py-8">
