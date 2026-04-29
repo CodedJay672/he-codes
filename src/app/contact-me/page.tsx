@@ -47,7 +47,7 @@ const ContactPage = () => {
         <h2 className="text-2xl font-semibold dark:text-white">Connect on Social Media</h2>
         <div className="flex gap-6 justify-center">
           <Link
-            href="https://linkedin.com/ln/emmanueljoel672/"
+            href="https://linkedin.com/in/emmanueljoel672/"
             rel="noopener noreferrer"
             target="_blank"
             className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
