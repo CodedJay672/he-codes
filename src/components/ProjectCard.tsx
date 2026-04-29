@@ -70,7 +70,7 @@ const ProjectCard = ({ ...project }: Props) => {
           <Link
             href={project.githubUrl}
             target="_blank"
-            className="flex-1 py-2 bg-white/10 hover:bg-white/20 dark:bg-white/5 dark:hover:bg-white/10 text-gray-900 dark:text-white rounded-lg font-semibold text-sm transition-colors"
+            className="flex-1 py-2 bg-white/10 hover:bg-white/20 dark:bg-white/5 dark:hover:bg-white/10 text-gray-900 dark:text-white rounded-lg font-semibold text-sm text-center transition-colors"
           >
             Code
           </Link>
