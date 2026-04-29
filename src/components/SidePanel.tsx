@@ -6,19 +6,7 @@ import { fetchMessages } from "@/lib/data/comments.data";
 
 const SidePanel = async () => {
   const comments = await fetchMessages();
-
-  if (comments instanceof AppwriteException) {
-    return (
-      <div className="w-full h-full flex justify-center items-center">
-        <h1>
-          {comments.code}: {comments.name}
-        </h1>
-        <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400">
-          {comments.message}
-        </p>
-      </div>
-    );
-  }
+  if (!comments || comments instanceof AppwriteException) return null;
 
   return (
     <div className="w-full h-full flex-col">

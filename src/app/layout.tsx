@@ -8,7 +8,9 @@ import SidePanel from "@/components/SidePanel";
 import SidePanelToggle from "@/components/ui/ToggleSwitch";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
-import "./globals.css";
+//@ts-ignore
+import './globals.css';
+
 
 const exo_2 = Exo_2({
   variable: "--font-exo-2",
@@ -16,8 +18,8 @@ const exo_2 = Exo_2({
 });
 
 export const metadata: Metadata = {
-  title: "Emmanuuel Joel",
-  description: "Web developer | Build Platforms That Elevate Your Business.",
+  title: "Emmanuel Ugoh | Full-Stack Developer",
+  description: "Full-stack developer specializing in building scalable web applications. 4+ years of experience with React, Next.js, and modern web technologies.",
 };
 
 export default function RootLayout({

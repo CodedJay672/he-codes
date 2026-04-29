@@ -20,6 +20,8 @@ const SidePanelToggle = ({ children }: { children: ReactNode }) => {
     setTheme("light");
   };
 
+  if (!theme) return null;
+
   return (
     <div className="w-full flex flex-between px-5 py-3 bg-white dark:bg-background-base sticky top-0 left-0 z-50 ">
       <div className="flex-1 flex items-center gap-1">

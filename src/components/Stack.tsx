@@ -11,10 +11,16 @@ const Stack = ({
   icon: string;
 }) => {
   return (
-    <article className="w-full p-3 rounded-lg bg-white hover:bg-gray-50 dark:bg-background/50 hover:dark:bg-background/60 select-none border border-gray-300 dark:border-gray-600 hover:border-primary transition-all relative overflow-hidden group">
-      <Image src={icon} alt={heading} width={40} height={40} className="mb-4" />
-      <h3 className="text-base text-primary font-semibold">{heading}</h3>
-      <p className="text-sm dark:text-gray-100 text-gray-800">{description}</p>
+    <article className="card-glass p-6 rounded-xl border border-white/10 dark:border-white/5 group hover:border-primary/30 transition-all duration-300">
+      <div className="flex items-start gap-4">
+        <div className="w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/20 flex-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+          <Image src={icon} alt={heading} width={24} height={24} className="opacity-70 group-hover:opacity-100 transition-opacity" />
+        </div>
+        <div className="flex-1">
+          <h3 className="text-base font-semibold dark:text-white text-gray-900 mb-2">{heading}</h3>
+          <p className="text-sm dark:text-gray-400 text-gray-600 leading-relaxed">{description}</p>
+        </div>
+      </div>
     </article>
   );
 };

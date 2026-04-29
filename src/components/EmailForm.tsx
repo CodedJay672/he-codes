@@ -67,75 +67,96 @@ const EmailForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} ref={formRef} className="flex flex-col gap-4">
-      <label htmlFor="name" className="form-label">
-        Fullname
-        <input
-          id="name"
-          type="text"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="form-input pl-10 w-full h-12"
-        />
-        <HiOutlineUser
-          size={20}
-          className="text-primary absolute top-[38px] left-3"
-        />
-      </label>
-      <label htmlFor="email" className="form-label">
-        Email
-        <input
-          id="email"
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="form-input pl-10 w-full h-12"
-        />
-        <HiOutlineMail
-          size={20}
-          className="text-primary absolute top-[38px] left-3"
-        />
-      </label>
-      <label htmlFor="phone" className="form-label">
-        Phone
-        <input
-          id="phone"
-          type="text"
-          name="phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="form-input pl-10 w-full h-12"
-        />
-        <HiOutlinePhone
-          size={20}
-          className="text-primary absolute top-[38px] left-3"
-        />
-      </label>
-      <label htmlFor="message" className="form-label">
-        Message
+    <form onSubmit={handleSubmit} ref={formRef} className="w-full max-w-2xl mx-auto space-y-4">
+      <div className="relative">
+        <label htmlFor="name" className="block text-sm font-medium dark:text-white text-gray-900 mb-2">
+          Full Name
+        </label>
+        <div className="relative">
+          <HiOutlineUser
+            size={20}
+            className="text-primary absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"
+          />
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="form-input pl-12 w-full h-12"
+          />
+        </div>
+      </div>
+
+      <div className="relative">
+        <label htmlFor="email" className="block text-sm font-medium dark:text-white text-gray-900 mb-2">
+          Email Address
+        </label>
+        <div className="relative">
+          <HiOutlineMail
+            size={20}
+            className="text-primary absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"
+          />
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="form-input pl-12 w-full h-12"
+          />
+        </div>
+      </div>
+
+      <div className="relative">
+        <label htmlFor="phone" className="block text-sm font-medium dark:text-white text-gray-900 mb-2">
+          Phone Number
+        </label>
+        <div className="relative">
+          <HiOutlinePhone
+            size={20}
+            className="text-primary absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"
+          />
+          <input
+            id="phone"
+            type="text"
+            name="phone"
+            placeholder="+234 XXX XXX XXXX"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="form-input pl-12 w-full h-12"
+          />
+        </div>
+      </div>
+
+      <div className="relative">
+        <label htmlFor="message" className="block text-sm font-medium dark:text-white text-gray-900 mb-2">
+          Message
+        </label>
         <textarea
           id="message"
           name="message"
+          placeholder="Tell me about your project and what you're looking to build..."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="form-input h-40 resize-none block w-full p-4"
+          className="form-input w-full h-40 resize-none p-4"
         />
-      </label>
+      </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full lg:w-72 h-12 bg-primary rounded-lg cursor-pointer mt-1 place-self-end flex-center gap-2 disabled:opacity-50"
+        className="btn-primary w-full h-12 flex-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting && (
           <VscLoading
-            size={24}
-            className="dark:text-gray-50 text-background-base animate-spin flex-center gap-1 inline"
+            size={20}
+            className="text-white animate-spin"
           />
         )}
-        <span className="text-white text-base">Send message</span>
+        <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
       </button>
     </form>
   );

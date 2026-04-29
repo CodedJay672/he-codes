@@ -2,43 +2,31 @@ import EmailForm from "@/components/EmailForm";
 import ContactCard from "@/components/shared/ContactCard";
 import Link from "next/link";
 import React from "react";
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa6";
 import { HiLocationMarker } from "react-icons/hi";
 import { HiDevicePhoneMobile, HiEnvelope } from "react-icons/hi2";
 
 const ContactPage = () => {
   return (
-    <section className="wrapper">
-      <div className="w-full py-10 flex-center flex-col gap-4">
-        <h1 className="text-background-base dark:text-gray-50 text-4xl lg:text-5xl font-bold">
-          Contact me
-        </h1>
-        <p className="text-background-base dark:text-gray-50 text-center lg:px-6">
-          Are you ready to build your next big project? Do you more hands and
-          brains on your team? Are you looking for a Web developer tutor? You
-          can contact me with the information below, or connect with me on my
-          socials
+    <section className="wrapper flex-center flex-col">
+      {/* Hero Section */}
+      <div className="w-full py-20 flex-center flex-col gap-6 text-center">
+        <h1 className="h1-style">Let's Build Something Amazing</h1>
+        <p className="text-lg dark:text-gray-400 text-gray-600 max-w-2xl">
+          Have a project in mind? Need to discuss your next venture? I'm here to help bring your ideas to life. Let's schedule a quick call or send me a message.
         </p>
-        <div className="flex-between gap-5">
-          <Link href="https://linkedin.com/ln/emmanueljoel672/">
-            <FaLinkedin size={20} className="text-blue-800" />
-          </Link>
-          <Link href="https://web.facebook.com/Manny6456">
-            <FaFacebook size={20} className="text-blue-700" />
-          </Link>
-          <Link href="https://linkedin.com/ln/emmanueljoel672/">
-            <FaTwitter size={20} className="text-cyan-600" />
-          </Link>
-        </div>
       </div>
 
-      <div className="w-full my-16 space-y-4">
-        <h1 className="h1-style">Contact Details</h1>
-        <p className="text-base lg:text-lg text-background dark:text-gray-200">
-          Feel free to contact through any of the media below: I typically
-          respond in 2 minutes.
-        </p>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 mt-5">
+      {/* Contact Methods */}
+      <div className="w-full py-12 space-y-8">
+        <h2 className="text-2xl font-semibold dark:text-white text-center mb-8">Ways to Reach Me</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ContactCard
+            icon={<HiEnvelope size={32} className="text-primary" />}
+            type="Email"
+            info="emmanjoel6456@gmail.com"
+          />
           <ContactCard
             icon={<HiDevicePhoneMobile size={32} className="text-primary" />}
             type="Phone"
@@ -49,22 +37,52 @@ const ContactPage = () => {
             type="Location"
             info="Lagos, Nigeria"
           />
-          <ContactCard
-            icon={<HiEnvelope size={32} className="text-primary" />}
-            type="Email"
-            info="emmanjoel6456@gmail.com"
-          />
         </div>
       </div>
 
-      <div className="space-y-4">
-        <h1 className="h1-style">Get in touch</h1>
-        <p className="text-background dark:text-gray-200">
-          Are you looking for a seasoned developer to work on your next project?
-          Do you need more hands on your team to bring your ideas to life? Get
-          in touch for exceptional web development or mobile development
-          projects.
-        </p>
+      <div className="section-divider my-12" />
+
+      {/* Social Links */}
+      <div className="w-full py-12 flex-center flex-col gap-6">
+        <h2 className="text-2xl font-semibold dark:text-white">Connect on Social Media</h2>
+        <div className="flex gap-6 justify-center">
+          <Link
+            href="https://linkedin.com/in/emmanueljoel672/"
+            target="_blank"
+            className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={24} className="text-primary" />
+          </Link>
+          <Link
+            href="https://github.com/codedjay672/"
+            target="_blank"
+            className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
+            aria-label="GitHub"
+          >
+            <FaGithub size={24} className="text-primary" />
+          </Link>
+          <Link
+            href="https://twitter.com"
+            target="_blank"
+            className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
+            aria-label="Twitter"
+          >
+            <FaTwitter size={24} className="text-primary" />
+          </Link>
+        </div>
+      </div>
+
+      <div className="section-divider my-12" />
+
+      {/* Contact Form Section */}
+      <div className="w-full py-12 space-y-8">
+        <div className="flex-center flex-col gap-4 text-center">
+          <h2 className="text-2xl font-semibold dark:text-white">Send Me a Message</h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-xl">
+            Tell me about your project, and I'll get back to you as soon as possible. I typically respond within 24 hours.
+          </p>
+        </div>
         <EmailForm />
       </div>
     </section>

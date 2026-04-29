@@ -10,13 +10,15 @@ const ContactCard = ({
   info: string;
 }) => {
   return (
-    <article className="w-full p-3 flex-center gap-2 border-l-2 border-primary">
-      {icon}
-      <div className="flex-1">
-        <h3 className="text-background-base dark:text-white font-semibold">
+    <article className="card-glass p-6 rounded-xl flex flex-col items-center gap-4 text-center border-0 hover:border-primary/30 transition-all">
+      <div className="w-14 h-14 rounded-lg bg-primary/10 flex-center">
+        {icon}
+      </div>
+      <div>
+        <h3 className="font-semibold dark:text-white text-gray-900 mb-1">
           {type}
         </h3>
-        <p className="text-xs lg:text-sm text-background-base dark:text-gray-200 font-light">
+        <p className="text-sm dark:text-gray-400 text-gray-600 break-words">
           {info}
         </p>
       </div>

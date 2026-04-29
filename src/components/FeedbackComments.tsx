@@ -10,11 +10,10 @@ const FeedbackComments = ({ comments }: { comments: Models.Document[] }) => {
 
   return (
     <div
-      className={`w-full flex-1 bg-white dark:bg-background-base overflow-y-scroll no-scrollbar transition-all duration-300 ease-in-out space-y-3 ${
-        fbkHeight
+      className={`w-full flex-1 bg-white dark:bg-background-base overflow-y-scroll no-scrollbar transition-all duration-300 ease-in-out space-y-3 ${fbkHeight
           ? "h-96 absolute bottom-2 right-0"
-          : "absolute bottom-0 right-0 h-44"
-      }`}
+          : "absolute bottom-0 right-0 h-32"
+        }`}
     >
       <button
         onClick={() => resizeFbk((prev) => !prev)}
@@ -23,9 +22,8 @@ const FeedbackComments = ({ comments }: { comments: Models.Document[] }) => {
         See {fbkHeight ? "less" : "more"}
         <HiChevronDown
           size={20}
-          className={`text-primary transition-transform duration-300 ease-in-out ${
-            fbkHeight ? "rotate-180" : "rotate-0"
-          }`}
+          className={`text-primary transition-transform duration-300 ease-in-out ${fbkHeight ? "rotate-180" : "rotate-0"
+            }`}
         />
       </button>
       {comments?.map((comment) => (
