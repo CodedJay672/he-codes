@@ -47,7 +47,8 @@ const ContactPage = () => {
         <h2 className="text-2xl font-semibold dark:text-white">Connect on Social Media</h2>
         <div className="flex gap-6 justify-center">
           <Link
-            href="https://linkedin.com/in/emmanueljoel672/"
+            href="https://linkedin.com/ln/emmanueljoel672/"
+            rel="noopener noreferrer"
             target="_blank"
             className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
             aria-label="LinkedIn"
@@ -56,6 +57,7 @@ const ContactPage = () => {
           </Link>
           <Link
             href="https://github.com/codedjay672/"
+            rel="noopener noreferrer"
             target="_blank"
             className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
             aria-label="GitHub"
@@ -63,7 +65,8 @@ const ContactPage = () => {
             <FaGithub size={24} className="text-primary" />
           </Link>
           <Link
-            href="https://twitter.com"
+            href="https://twitter.com/_iammanny_"
+            rel="noopener noreferrer"
             target="_blank"
             className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
             aria-label="Twitter"

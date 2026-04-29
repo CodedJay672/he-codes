@@ -37,7 +37,7 @@ const MyResume = () => {
                 Full-Stack Developer & Digital Solutions Engineer
               </p>
             </div>
-            <div className="w-full lg:w-auto grid grid-cols-2 lg:grid-cols-1 gap-3 text-sm">
+            <div className="w-full lg:w-auto grid md:grid-cols-2 grid-cols-1 gap-3 text-sm">
               <div className="flex items-center gap-2 dark:text-gray-300">
                 <HiOutlinePhone size={16} className="text-primary flex-shrink-0" />
                 <span>+234 903 270 5515</span>
