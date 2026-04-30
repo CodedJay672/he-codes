@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { HiArrowTopRightOnSquare, HiCheckCircle } from "react-icons/hi2";
 
 interface Props {
   id: string;
@@ -15,64 +15,76 @@ interface Props {
 }
 
 const ProjectCard = ({ ...project }: Props) => {
-  const stack = project.stack.split(",");
+  const stack = project.stack ? project.stack.split(",") : [];
+  const features = project.features ? project.features.split(",") : [];
 
   return (
-    <article className="card-glass overflow-hidden group border border-white/10 hover:border-primary/30 transition-all duration-300">
-      <div className="w-full h-72 relative overflow-hidden">
+    <article className="card-glass overflow-hidden border border-white/10 hover:border-primary/30 transition-shadow duration-300 shadow-sm hover:shadow-lg">
+      <div className="relative overflow-hidden h-72 group">
         <Image
           src={project.imageUrl}
           alt={project.title}
           fill
-          className="object-cover group-hover:scale-110 transition-transform duration-500"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-center">
+        <div className="absolute inset-x-0 top-0 p-4 flex items-center justify-between bg-black/40 backdrop-blur-sm">
+          <span className="text-xs uppercase tracking-[0.24em] text-white/80">Project Preview</span>
           <Link
             href={project.liveUrl}
             target="_blank"
-            className="size-14 rounded-full bg-primary flex-center hover:bg-primary/90 transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-3 py-2 text-xs font-semibold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors"
           >
-            <HiArrowTopRightOnSquare size={28} className="text-white" />
+            View Live
+            <HiArrowTopRightOnSquare size={16} />
           </Link>
         </div>
       </div>
 
-      <div className="w-full p-6 grid grid-cols-1 gap-4">
+      <div className="p-6 flex flex-col gap-5">
         <div>
-          <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-2 group-hover:text-primary transition-colors">
-            {project.title}
-          </h3>
-          <p className="text-sm dark:text-gray-400 text-gray-600 line-clamp-2">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{project.title}</h3>
+          <p className="mt-3 text-sm leading-6 text-gray-600 dark:text-gray-300 line-clamp-3">
             {project.description}
           </p>
         </div>
 
-        <div className="w-full h-full flex gap-2 flex-wrap mb-auto">
-          {stack.map((item, idx) => (
-            <span
-              key={idx}
-              className="text-xs inline-block py-1 px-3 bg-primary/10 dark:bg-primary/20 text-primary rounded-full font-medium"
-            >
-              {item.trim()}
-            </span>
-          ))}
+        <div className="flex-1 flex flex-col gap-4">
+          <div className="space-y-2">
+            {features.slice(0, 3).map((item, idx) => (
+              <div key={idx} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                <HiCheckCircle className="mt-1 text-primary" size={18} />
+                <span>{item.trim()}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-2 items-center">
+            {stack.map((item, idx) => (
+              <span
+                key={idx}
+                className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary bg-primary/10 dark:bg-primary/20 rounded-full px-3 py-1"
+              >
+                {item.trim()}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <div className="flex gap-3 pt-4 border-t border-white/10 mt-auto">
+        <div className="grid gap-3 sm:grid-cols-2 mt-auto">
           <Link
             href={project.liveUrl}
             target="_blank"
-            className="flex-1 flex items-center justify-center gap-2 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold text-sm transition-colors"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary py-3 text-sm font-semibold text-white shadow-lg shadow-primary/15 transition hover:bg-primary/90"
           >
-            <span>Live Site</span>
+            Live Site
             <HiArrowTopRightOnSquare size={16} />
           </Link>
           <Link
             href={project.githubUrl}
             target="_blank"
-            className="flex-1 py-2 bg-white/10 hover:bg-white/20 dark:bg-white/5 dark:hover:bg-white/10 text-gray-900 dark:text-white rounded-lg font-semibold text-sm text-center transition-colors"
+            className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/10 py-3 text-sm font-semibold text-gray-900 dark:text-white transition hover:border-primary/30 hover:bg-white/15"
           >
-            Code
+            View Code
           </Link>
         </div>
       </div>

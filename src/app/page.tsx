@@ -84,75 +84,87 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="card-glass p-8 rounded-xl hover:border-primary/50 transition-all duration-300">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-2xl flex-shrink-0">🌐</div>
-              <div className="flex-1">
-                <h3 className="h3-style mb-2">Web Application Development</h3>
-                <p className="text-sm dark:text-gray-400 text-gray-600">
-                  Full-stack development of scalable, high-performance web applications using React, Next.js, TypeScript, and modern backend technologies.
-                </p>
+        <div className="w-full space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="card-glass p-8 rounded-xl hover:border-primary/50 transition-all duration-300 lg:col-span-2">
+              <div className="flex flex-col gap-6">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 rounded-xl bg-primary/20 flex-center text-3xl flex-shrink-0">🌐</div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold dark:text-white mb-3">Web Application Development</h3>
+                    <p className="text-base dark:text-gray-400 text-gray-600 leading-relaxed">
+                      Full-stack web platforms built to scale with your business. I deliver secure, maintainable applications using React, Next.js, TypeScript, and modern backend services.
+                    </p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <span className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary">React</span>
+                  <span className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary">Next.js</span>
+                  <span className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary">TypeScript</span>
+                  <span className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary">APIs & Headless CMS</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-glass p-8 rounded-xl hover:border-primary/50 transition-all duration-300">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-16 h-16 rounded-xl bg-primary/20 flex-center text-3xl">📱</div>
+                <div>
+                  <h3 className="text-xl font-bold dark:text-white mb-2">Mobile App Development</h3>
+                  <p className="text-sm dark:text-gray-400 text-gray-600">
+                    Polished cross-platform mobile solutions using React Native or Flutter for iOS and Android.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="card-glass p-8 rounded-xl hover:border-primary/50 transition-all duration-300">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-2xl flex-shrink-0">📱</div>
-              <div className="flex-1">
-                <h3 className="h3-style mb-2">Mobile App Development</h3>
-                <p className="text-sm dark:text-gray-400 text-gray-600">
-                  Cross-platform mobile solutions using React Native and Flutter. Beautiful, responsive apps for iOS and Android.
-                </p>
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-glass p-6 rounded-xl hover:border-primary/50 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-xl flex-shrink-0">🎨</div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold dark:text-white mb-2">UI/UX Implementation</h3>
+                  <p className="text-sm dark:text-gray-400 text-gray-600">
+                    Pixel-perfect interfaces designed for clarity, usability, and accessibility.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="card-glass p-8 rounded-xl hover:border-primary/50 transition-all duration-300">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-2xl flex-shrink-0">🎨</div>
-              <div className="flex-1">
-                <h3 className="h3-style mb-2">UI/UX Implementation</h3>
-                <p className="text-sm dark:text-gray-400 text-gray-600">
-                  Pixel-perfect implementation of modern interfaces with focus on user experience, performance, and accessibility standards.
-                </p>
+            <div className="card-glass p-6 rounded-xl hover:border-primary/50 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-xl flex-shrink-0">⚡</div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold dark:text-white mb-2">Performance & Optimization</h3>
+                  <p className="text-sm dark:text-gray-400 text-gray-600">
+                    Improving speed, reliability, and search visibility across your product.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="card-glass p-8 rounded-xl hover:border-primary/50 transition-all duration-300">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-2xl flex-shrink-0">⚡</div>
-              <div className="flex-1">
-                <h3 className="h3-style mb-2">Performance & Optimization</h3>
-                <p className="text-sm dark:text-gray-400 text-gray-600">
-                  Optimizing applications for speed, SEO, and scalability. Turning slow apps into lightning-fast experiences.
-                </p>
+            <div className="card-glass p-6 rounded-xl hover:border-primary/50 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-xl flex-shrink-0">🎓</div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold dark:text-white mb-2">Tutoring & Mentorship</h3>
+                  <p className="text-sm dark:text-gray-400 text-gray-600">
+                    One-on-one coaching for developers and teams to build modern skills and ship with confidence.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="card-glass p-8 rounded-xl hover:border-primary/50 transition-all duration-300">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-2xl flex-shrink-0">🎓</div>
-              <div className="flex-1">
-                <h3 className="h3-style mb-2">Tutoring & Mentorship</h3>
-                <p className="text-sm dark:text-gray-400 text-gray-600">
-                  One-on-one guidance for developers and aspiring engineers. Learn best practices, modern stacks, and career advancement strategies.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="card-glass p-8 rounded-xl hover:border-primary/50 transition-all duration-300">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-2xl flex-shrink-0">🏆</div>
-              <div className="flex-1">
-                <h3 className="h3-style mb-2">Technical Consulting</h3>
-                <p className="text-sm dark:text-gray-400 text-gray-600">
-                  Strategic guidance on architecture, tech stack selection, and scaling solutions. Help your team make informed technical decisions.
-                </p>
+            <div className="card-glass p-6 rounded-xl hover:border-primary/50 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/20 flex-center text-xl flex-shrink-0">🏆</div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold dark:text-white mb-2">Technical Consulting</h3>
+                  <p className="text-sm dark:text-gray-400 text-gray-600">
+                    Strategic advice on architecture, stack selection, and scaling decisions.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
