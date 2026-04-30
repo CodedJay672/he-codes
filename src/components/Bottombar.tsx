@@ -1,8 +1,6 @@
 import React from "react";
 import NavLink from "./ui/NavLink";
-import { HiFolder, HiUserCircle } from "react-icons/hi2";
-import { MdFileOpen } from "react-icons/md";
-import { HiMail } from "react-icons/hi";
+import { HiDocument, HiEnvelope, HiFolder, HiUserCircle, } from "react-icons/hi2";
 
 const Bottombar = () => {
   return (
@@ -15,7 +13,7 @@ const Bottombar = () => {
       <NavLink
         path="/my-resume"
         label="resume"
-        icon={<MdFileOpen className="size-4 lg:size-8" />}
+        icon={<HiDocument className="size-4 lg:size-8" />}
       />
       <NavLink
         path="/my-portfolio"
@@ -25,7 +23,7 @@ const Bottombar = () => {
       <NavLink
         path="/contact-me"
         label="contact"
-        icon={<HiMail className="size-4 lg:size-8" />}
+        icon={<HiEnvelope className="size-4 lg:size-8" />}
       />
     </div>
   );

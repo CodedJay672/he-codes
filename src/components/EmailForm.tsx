@@ -2,13 +2,12 @@
 
 import { deleteContact, sendEmail } from "@/lib/actions/contact.actions";
 import React, { useRef, useState } from "react";
-import { HiOutlineMail } from "react-icons/hi";
-import { HiOutlinePhone, HiOutlineUser } from "react-icons/hi2";
-import { VscLoading } from "react-icons/vsc";
+import { HiOutlinePhone, HiOutlineUser, HiArrowPath } from "react-icons/hi2";
 import emailjs from "@emailjs/browser";
 import { config } from "@/lib/config";
 import { toast } from "sonner";
 import { AppwriteException } from "node-appwrite";
+import { HiOutlineMail } from "react-icons/hi";
 
 const EmailForm = () => {
   const [name, setName] = useState("");
@@ -151,7 +150,7 @@ const EmailForm = () => {
         className="btn-primary w-full h-12 flex-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting && (
-          <VscLoading
+          <HiArrowPath
             size={20}
             className="text-white animate-spin"
           />

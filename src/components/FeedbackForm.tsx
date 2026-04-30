@@ -2,8 +2,7 @@
 
 import { createComment } from "@/lib/actions/comments.actions";
 import React, { useActionState, useRef, useState } from "react";
-import { HiArrowRightCircle } from "react-icons/hi2";
-import { VscLoading } from "react-icons/vsc";
+import { HiArrowRightCircle, HiArrowPath } from "react-icons/hi2";
 
 const FeedbackForm = () => {
   const [name, setName] = useState("");
@@ -63,7 +62,7 @@ const FeedbackForm = () => {
         disabled={isPending}
       >
         {isPending ? (
-          <VscLoading size={40} className="text-gray-50 animate-spin" />
+          <HiArrowPath size={40} className="text-gray-50 animate-spin" />
         ) : (
           <HiArrowRightCircle
             size={40}

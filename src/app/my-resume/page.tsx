@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
-import { HiOutlineGlobeAlt, HiOutlinePhone } from "react-icons/hi2";
-import { IoMdDocument } from "react-icons/io";
+import { HiDocument, HiEnvelope, HiMapPin, HiOutlineGlobeAlt, HiOutlinePhone } from "react-icons/hi2";
 
 const MyResume = () => {
   return (
@@ -19,7 +17,7 @@ const MyResume = () => {
           download
           className="btn-primary inline-flex items-center gap-2"
         >
-          <IoMdDocument size={20} />
+          <HiDocument size={20} />
           Download PDF
         </Link>
       </div>
@@ -43,7 +41,7 @@ const MyResume = () => {
                 <span>+234 903 270 5515</span>
               </div>
               <div className="flex items-center gap-2 dark:text-gray-300">
-                <HiOutlineMail size={16} className="text-primary flex-shrink-0" />
+                <HiEnvelope size={16} className="text-primary flex-shrink-0" />
                 <span>emmanjoel6456@gmail.com</span>
               </div>
               <div className="flex items-center gap-2 dark:text-gray-300">
@@ -53,7 +51,7 @@ const MyResume = () => {
                 </Link>
               </div>
               <div className="flex items-center gap-2 dark:text-gray-300">
-                <HiOutlineLocationMarker size={16} className="text-primary flex-shrink-0" />
+                <HiMapPin size={16} className="text-primary flex-shrink-0" />
                 <span>Lagos, Nigeria</span>
               </div>
             </div>

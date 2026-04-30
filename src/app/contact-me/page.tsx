@@ -2,9 +2,7 @@ import EmailForm from "@/components/EmailForm";
 import ContactCard from "@/components/shared/ContactCard";
 import Link from "next/link";
 import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa6";
-import { HiLocationMarker } from "react-icons/hi";
-import { HiDevicePhoneMobile, HiEnvelope } from "react-icons/hi2";
+import { HiChatBubbleLeftRight, HiCodeBracket, HiDevicePhoneMobile, HiEnvelope, HiGlobeAlt, HiMapPin } from "react-icons/hi2";
 
 const ContactPage = () => {
   return (
@@ -33,7 +31,7 @@ const ContactPage = () => {
             info="+234 903 270 5515"
           />
           <ContactCard
-            icon={<HiLocationMarker size={32} className="text-primary" />}
+            icon={<HiMapPin size={32} className="text-primary" />}
             type="Location"
             info="Lagos, Nigeria"
           />
@@ -53,7 +51,7 @@ const ContactPage = () => {
             className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={24} className="text-primary" />
+            <HiGlobeAlt size={24} className="text-primary" />
           </Link>
           <Link
             href="https://github.com/codedjay672/"
@@ -62,7 +60,7 @@ const ContactPage = () => {
             className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
             aria-label="GitHub"
           >
-            <FaGithub size={24} className="text-primary" />
+            <HiCodeBracket size={24} className="text-primary" />
           </Link>
           <Link
             href="https://twitter.com/_iammanny_"
@@ -71,7 +69,7 @@ const ContactPage = () => {
             className="w-14 h-14 rounded-full bg-primary/10 hover:bg-primary/20 flex-center transition-colors"
             aria-label="Twitter"
           >
-            <FaTwitter size={24} className="text-primary" />
+            <HiChatBubbleLeftRight size={24} className="text-primary" />
           </Link>
         </div>
       </div>

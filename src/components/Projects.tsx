@@ -20,7 +20,7 @@ const Projects = async () => {
   }
 
   return (
-    <div className="w-full mt-6 lg:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-3">
+    <div className="w-full mt-6 lg:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-3 items-stretch">
       {projects.total > 0 ? (
         projects.documents?.map((project) => (
           <ProjectCard

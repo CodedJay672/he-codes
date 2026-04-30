@@ -2,9 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { ReactNode, useState } from "react";
-import { HiDotsVertical, HiOutlineX } from "react-icons/hi";
-import { HiPhone } from "react-icons/hi2";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { HiEllipsisVertical, HiMoon, HiPhone, HiSun, HiXMark } from "react-icons/hi2";
 
 // toggle switch for mobile
 const SidePanelToggle = ({ children }: { children: ReactNode }) => {
@@ -42,16 +40,16 @@ const SidePanelToggle = ({ children }: { children: ReactNode }) => {
           className="p-2 rounded-full flex-center cursor-pointer border-2 border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-background-base"
         >
           {theme === "dark" ? (
-            <MdLightMode className="text-base lg:text-sm  text-gray-500 dark:text-gray-400 outline-none" />
+            <HiSun className="text-base lg:text-sm  text-gray-500 dark:text-gray-400 outline-none" />
           ) : (
-            <MdDarkMode className="text-base lg:text-sm  text-gray-500 dark:text-gray-400 outline-none" />
+            <HiMoon className="text-base lg:text-sm  text-gray-500 dark:text-gray-400 outline-none" />
           )}
         </button>
         <button
           onClick={() => setshowSideForm(true)}
           className="p-2 rounded-full  flex justify-center items-center lg:hidden border-2 border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-background-base "
         >
-          <HiDotsVertical className="text-base lg:text-sm  text-gray-500 dark:text-gray-400 outline-none" />
+          <HiEllipsisVertical className="text-base lg:text-sm  text-gray-500 dark:text-gray-400 outline-none" />
         </button>
       </div>
       <div
@@ -66,7 +64,7 @@ const SidePanelToggle = ({ children }: { children: ReactNode }) => {
           `}
       >
         <div className="w-full flex justify-end">
-          <HiOutlineX
+          <HiXMark
             size={44}
             onClick={() => setshowSideForm(false)}
             className="text-primary cursor-pointer mt-2 p-3"

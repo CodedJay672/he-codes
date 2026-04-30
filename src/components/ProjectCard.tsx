@@ -19,7 +19,7 @@ const ProjectCard = ({ ...project }: Props) => {
   const features = project.features ? project.features.split(",") : [];
 
   return (
-    <article className="card-glass overflow-hidden border border-white/10 hover:border-primary/30 transition-shadow duration-300 shadow-sm hover:shadow-lg">
+    <article className="card-glass overflow-hidden border border-white/10 hover:border-primary/30 transition-shadow duration-300 shadow-sm hover:shadow-lg flex flex-col h-full">
       <div className="relative overflow-hidden h-72 group">
         <Image
           src={project.imageUrl}
@@ -40,16 +40,15 @@ const ProjectCard = ({ ...project }: Props) => {
         </div>
       </div>
 
-      <div className="p-6 flex flex-col gap-5">
-        <div>
+      <div className="p-6 flex flex-col gap-5 flex-1">
+        <div className="flex-1 space-y-2">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{project.title}</h3>
           <p className="mt-3 text-sm leading-6 text-gray-600 dark:text-gray-300 line-clamp-3">
             {project.description}
           </p>
-        </div>
 
-        <div className="flex-1 flex flex-col gap-4">
-          <div className="space-y-2">
+
+          <div className="space-y-1">
             {features.slice(0, 3).map((item, idx) => (
               <div key={idx} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
                 <HiCheckCircle className="mt-1 text-primary" size={18} />

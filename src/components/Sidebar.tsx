@@ -1,11 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { HiDocument, HiUserCircle } from "react-icons/hi2";
-import { MdFileOpen } from "react-icons/md";
-import { HiMail } from "react-icons/hi";
-
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { HiCodeBracket, HiDocument, HiGlobeAlt, HiUserCircle, HiChatBubbleLeftRight, HiEnvelope } from "react-icons/hi2";
 import NavLink from "./ui/NavLink";
 
 import Footer from "./Footer";
@@ -35,14 +31,14 @@ const Sidebar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin size={20} className="text-blue-800" />
+            <HiGlobeAlt size={20} className="text-blue-800" />
           </Link>
           <Link
             href="https://github.com/codedjay672/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub
+            <HiCodeBracket
               size={20}
               className="text-background-base dark:text-white"
             />
@@ -52,7 +48,7 @@ const Sidebar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter size={20} className="text-cyan-600" />
+            <HiChatBubbleLeftRight size={20} className="text-cyan-600" />
           </Link>
         </div>
         <Link
@@ -74,7 +70,7 @@ const Sidebar = () => {
         <NavLink
           path="/my-resume"
           label="my Resume"
-          icon={<MdFileOpen className="size-6 lg:size-4" />}
+          icon={<HiDocument className="size-6 lg:size-4" />}
         />
         <NavLink
           path="/my-portfolio"
@@ -84,7 +80,7 @@ const Sidebar = () => {
         <NavLink
           path="/contact-me"
           label="contact me"
-          icon={<HiMail className="size-6 lg:size-4" />}
+          icon={<HiEnvelope className="size-6 lg:size-4" />}
         />
       </nav>
       <Footer />
