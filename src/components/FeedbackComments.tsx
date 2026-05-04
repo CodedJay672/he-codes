@@ -10,9 +10,9 @@ const FeedbackComments = ({ comments }: { comments: Models.Document[] }) => {
 
   return (
     <div
-      className={`w-full flex-1 bg-white dark:bg-background-base overflow-y-scroll no-scrollbar transition-all duration-300 ease-in-out space-y-3 ${fbkHeight
-          ? "h-96 absolute bottom-2 right-0"
-          : "absolute bottom-0 right-0 h-32"
+      className={`w-full flex-1 bg-white dark:bg-background-base overflow-y-scroll no-scrollbar transition-all duration-300 ease-in-out space-y-3 pb-2 ${fbkHeight
+        ? "h-96 absolute bottom-2 right-0"
+        : "absolute bottom-0 right-0 h-32"
         }`}
     >
       <button

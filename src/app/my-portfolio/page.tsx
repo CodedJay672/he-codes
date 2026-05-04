@@ -2,7 +2,7 @@ import Projects from "@/components/Projects";
 import Tab from "@/components/shared/tab";
 import Link from "next/link";
 import React, { Suspense } from "react";
-import { HiArrowRight, HiFunnel, HiSquares2X2 } from "react-icons/hi2";
+import { HiArrowRight, HiSquares2X2 } from "react-icons/hi2";
 
 const categories = [
   { name: "All", icon: "📁", value: "" },
