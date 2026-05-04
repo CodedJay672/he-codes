@@ -51,7 +51,7 @@ const Sidebar = () => {
           </Link>
         </div>
         <Link
-          href="https://wa.link/09032705515"
+          href="https://wa.link/evwynp"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm mt-3 text-background-base dark:text-gray-50 bg-gray-300 dark:bg-background transition-all px-4 py-1 lg:px-6 rounded-xl hover:opacity-95"
