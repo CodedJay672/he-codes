@@ -17,6 +17,7 @@ const FeedbackComments = ({ comments }: { comments: Models.Document[] }) => {
     >
       <button
         onClick={() => resizeFbk((prev) => !prev)}
+        aria-label="see more feedback comments"
         className="w-full p-3 bg-gray-100 flex justify-center items-center gap-2 dark:bg-background text-primary font-medium sticky top-0 left-0 cursor-pointer "
       >
         See {fbkHeight ? "less" : "more"}
