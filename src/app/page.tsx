@@ -43,11 +43,11 @@ export default function Home() {
           <p className="text-sm md:text-base dark:text-gray-400 text-gray-600">Years Experience</p>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <p className="text-3xl md:text-4xl font-bold text-primary">20+</p>
+          <p className="text-3xl md:text-4xl font-bold text-primary">3+</p>
           <p className="text-sm md:text-base dark:text-gray-400 text-gray-600">Projects Shipped</p>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <p className="text-3xl md:text-4xl font-bold text-primary">15+</p>
+          <p className="text-3xl md:text-4xl font-bold text-primary">6+</p>
           <p className="text-sm md:text-base dark:text-gray-400 text-gray-600">Happy Clients</p>
         </div>
         <div className="flex flex-col items-center gap-2">

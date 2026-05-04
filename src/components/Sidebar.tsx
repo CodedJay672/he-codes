@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiCodeBracket, HiDocument, HiGlobeAlt, HiUserCircle, HiChatBubbleLeftRight, HiEnvelope } from "react-icons/hi2";
 import NavLink from "./ui/NavLink";
-
 import Footer from "./Footer";
 
 const Sidebar = () => {
@@ -62,6 +61,7 @@ const Sidebar = () => {
       </div>
 
       <nav className="w-full flex flex-col flex-1 border-t border-background/50 dark:border-background-light/50 mt-6 mb-16 lg:mb-6 py-6 space-y-3">
+
         <NavLink
           path="/"
           label="about me"
@@ -83,6 +83,7 @@ const Sidebar = () => {
           icon={<HiEnvelope className="size-6 lg:size-4" />}
         />
       </nav>
+
       <Footer />
     </aside>
   );

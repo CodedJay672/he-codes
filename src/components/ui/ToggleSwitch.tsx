@@ -1,13 +1,22 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import { HiEllipsisVertical, HiMoon, HiPhone, HiSun, HiXMark } from "react-icons/hi2";
 
 // toggle switch for mobile
 const SidePanelToggle = ({ children }: { children: ReactNode }) => {
   const { theme, setTheme } = useTheme();
+  const [loaded, setLoaded] = useState(false);
   const [showSideForm, setshowSideForm] = useState(false);
+
+  // When mounted on client, now we can show the UI
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  if (!loaded) return null;
+
 
   const changeTheme = () => {
     if (theme === "light") {

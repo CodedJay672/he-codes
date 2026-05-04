@@ -15,21 +15,21 @@ const projectTypes = [
   {
     type: "Web Applications",
     description: "Full-stack web platforms and SaaS solutions",
-    count: "12+",
+    count: "3+",
     icon: "🌐",
     color: "from-blue-500 to-cyan-500"
   },
   {
     type: "Mobile Apps",
     description: "Cross-platform mobile experiences",
-    count: "5+",
+    count: "1+",
     icon: "📱",
     color: "from-green-500 to-emerald-500"
   },
   {
     type: "E-Commerce",
     description: "Online stores and marketplaces",
-    count: "3+",
+    count: "2+",
     icon: "🛒",
     color: "from-purple-500 to-pink-500"
   }
